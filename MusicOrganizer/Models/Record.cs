@@ -4,9 +4,9 @@ namespace MusicOrganizer.Models
 {
     public class Record
     {
-        public string Title {get;set;}
-        public int Id {get;}
-        public Artist NameOfArtist {get;set;} 
+        public string Title { get; set; }
+        public int Id { get; }
+        public Artist NameOfArtist { get; set; } 
         private static List<Record> _instances = new List<Record>{};
         public Record (string title, Artist name)
         {
@@ -28,7 +28,7 @@ namespace MusicOrganizer.Models
 
         public static Record Find(int searchId)
         {
-            return _instances[searchId-1];
+            return _instances[searchId - 1];
         }
     }
 }

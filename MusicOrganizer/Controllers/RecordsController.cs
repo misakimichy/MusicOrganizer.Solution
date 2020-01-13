@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using MusicOrganizer.Models;
-using System;
 
 namespace MusicOrganizer.Controllers
 {
@@ -59,6 +58,5 @@ namespace MusicOrganizer.Controllers
             Record foundRecord = Record.Find(id);
             return View(foundRecord);
         }
-
     }
 }

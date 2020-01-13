@@ -5,8 +5,8 @@ namespace MusicOrganizer.Models
 {
     public class Artist
     {
-        public string Name {get;set;}
-        public int Id {get;}
+        public string Name { get; set; }
+        public int Id { get; }
         
         private static List<Artist> _instances = new List<Artist>{};
         private List<Record> records= new List<Record>{};
@@ -29,7 +29,7 @@ namespace MusicOrganizer.Models
 
         public static Artist Find(int searchId)
         {
-            return _instances[searchId-1];
+            return _instances[searchId - 1];
         }
         public void AddRecord(Record record)
         {
@@ -52,7 +52,7 @@ namespace MusicOrganizer.Models
         }
         public static Artist GetArtist(int id)
         {
-            return _instances[id-1];
+            return _instances[id - 1];
         }
         public static List <Artist> GetArtistPartial(string searchName)
         {

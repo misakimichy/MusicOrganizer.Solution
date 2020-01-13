@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
 using MusicOrganizer.Models;
 
@@ -14,7 +13,6 @@ namespace MusicOrganizer.Controllers
       return View(allArtists);
     }
 
-
     [HttpGet("/artists/{id}")]
     public ActionResult Show(int id)
     {
@@ -25,8 +23,6 @@ namespace MusicOrganizer.Controllers
       model.Add("records", artistRecords);
       return View(model);
     }
-
-
 
     // // This one creates new Items within a given Artist, not new Artists:
     // [HttpPost("/artists/{artistId}/records")]
