@@ -4,12 +4,12 @@
 }
 <h3>Here are all the records by <em>@Model["artist"].Name:</em></h3>
 
-<ol>
 @foreach (Record record in @Model["records"])
 {
-    <li><a href='/artists/@Model["artist"].Id/records/@record.Id'>@record.Title</li>
+    <p><a href='/artists/@Model["artist"].Id/records/@record.Id'>@record.Title</a></p>
 }
-</ol>
 
-<p><a href='/artists'>Return to artists list</a></p>
-<p><a href="/"> Go home</a></p>
+<div class="btn-container">
+    <a href='/artists'class="btn btn-info">Return to artists list</a>
+    <a href="/"class="btn btn-secondary">Go home</a>
+</div>

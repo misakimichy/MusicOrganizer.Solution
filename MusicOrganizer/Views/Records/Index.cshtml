@@ -9,16 +9,17 @@
 {
   <p>There are no records in the list.</p>
 }
-<ul>
+
   @foreach (Record record in Model)
   {
-    <li><a href='/records/@record.Id'>@record.Title</a></li>
+    <p><a href='/records/@record.Id'>@record.Title</a></p>
   }
-</ul>
 
-<p><a href="/records/new">Add a new record</a></p>
-<p><a href="/"> Go home</a></p>
 
-<form action="/records/delete" method="post">
-  <button class="btn btn-info" type="submit" name="button">Clear All Records</button>
-</form>
+<div class="btn-container">
+  <a href="/records/new" class="btn btn-info">Add a new record</a>
+  <form action="/records/delete" method="post">
+    <button class="btn btn-danger" type="submit" name="button">Clear All Records</button>
+  </form>
+  <a href="/" class="btn btn-secondary">Go home</a>
+</div>

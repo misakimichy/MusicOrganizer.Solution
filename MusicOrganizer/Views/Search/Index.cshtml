@@ -9,13 +9,13 @@
 else
 {
     <h1>Here is your search result:</h1>
-    <ul>
         @foreach (Artist artist in Model)
         {
-            <li><a href="/artists/@artist.Id">@artist.Name</a></li>
+            <p><a href="/artists/@artist.Id">@artist.Name</a></p>
         }
-    </ul>
 }
 
-<p><a href="/search_by_artist/new">Search another artist</a></p>
-<p><a href="/"> Go home</a></p>
+<div class="btn-container">
+    <a href="/search_by_artist/new" class="btn btn-info">Search another artist</a>
+    <a href="/" class="btn btn-secondary">Go home</a>
+</div>
